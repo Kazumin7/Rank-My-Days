@@ -72,3 +72,26 @@
   border-color: #2563eb;
   transform: scale(1.2);
 }
+
+.color-key {
+  display: flex;
+  justify-content: center;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+  flex-wrap: wrap;
+}
+
+.color-key-item {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  font-size: 0.75rem;
+  color: #4b5563;
+}
+
+.key-circle {
+  width: 1rem;
+  height: 1rem;
+  border-radius: 50%;
+  border: 1px solid #d1d5db;
+}

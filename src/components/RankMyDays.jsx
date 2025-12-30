@@ -28,12 +28,20 @@ const RankMyDays = () => {
   };
 
   const handleSubmit = async () => {
-    if (editingDay && inputValue !== '') {
-      const value = parseFloat(inputValue);
-      if (value >= 0 && value <= 10) {
-        const newRatings = { ...ratings, [editingDay]: value };
+    if (editingDay) {
+      if (inputValue === '') {
+        // Clear the rating
+        const newRatings = { ...ratings };
+        delete newRatings[editingDay];
         setRatings(newRatings);
         await saveRatings(newRatings);
+      } else {
+        const value = parseFloat(inputValue);
+        if (value >= 0 && value <= 10) {
+          const newRatings = { ...ratings, [editingDay]: value };
+          setRatings(newRatings);
+          await saveRatings(newRatings);
+        }
       }
     }
     setEditingDay(null);

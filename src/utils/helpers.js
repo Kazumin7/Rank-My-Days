@@ -12,18 +12,18 @@ export const getColor = (rating) => {
   if (rating === 0) return '#000000';
   
   const colors = [
-    '#000000', // 0
-    '#8B0000', // 1 - dark red
-    '#B22222', // 2
-    '#DC143C', // 3
-    '#FF4500', // 4 - orange red
-    '#FF8C00', // 5 - dark orange
-    '#FFA500', // 6 - orange
-    '#FFD700', // 7 - gold
-    '#9ACD32', // 8 - yellow green
-    '#32CD32', // 9 - lime green
-    '#00FF00', // 10 - bright green
+    '#000000', // 0 - black
+    '#FF0000', // 1 - bright red
+    '#FF0000', // 2 - bright red
+    '#FF8C00', // 3 - orange
+    '#FF8C00', // 4 - orange
+    '#FFFF00', // 5 - yellow
+    '#FFFF00', // 6 - yellow
+    '#9ACD32', // 7 - yellow green
+    '#7FFF00', // 8 - chartreuse (brighter green)
+    '#00FF00', // 9 - lime green (brightest)
+    '#0000FF', // 10 - blue
   ];
-  
+
   return colors[Math.round(rating)];
 };
