@@ -10,6 +10,7 @@
 
 # production
 /build
+ratings-data.json
 
 # misc
 .DS_Store

@@ -1,0 +1,74 @@
+.main-view {
+  padding: 1rem;
+  background-color: #f9fafb;
+  min-height: 100vh;
+}
+
+.main-container {
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+.main-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #1f2937;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.calendar-grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 0.25rem;
+  background-color: white;
+  padding: 0.75rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  overflow-x: auto;
+}
+
+.month-column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 50px;
+}
+
+.month-label {
+  font-size: 0.75rem;
+  font-weight: 600;
+  margin-bottom: 0.35rem;
+  color: #2563eb;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.25rem;
+}
+
+.month-label:hover {
+  color: #1d4ed8;
+  text-decoration: underline;
+}
+
+.days-container {
+  display: flex;
+  flex-direction: column;
+  gap: 0.05rem;
+}
+
+.day-circle {
+  width: 1.25rem;
+  height: 1.25rem;
+  border-radius: 50%;
+  border: 1px solid #d1d5db;
+  cursor: pointer;
+  transition: border-color 0.2s;
+  padding: 0;
+}
+
+.day-circle:hover {
+  border-color: #2563eb;
+  transform: scale(1.2);
+}
